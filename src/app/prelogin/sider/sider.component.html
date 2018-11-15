@@ -1,0 +1,74 @@
+<div fxlayout="column">
+      <mat-card id="postlogin">
+            <button mat-icon-button fxLayoutAlign="center">
+                  <mat-icon>search</mat-icon>
+                  <mat-icon>more_vert</mat-icon>
+            </button>
+      </mat-card>
+
+</div>
+<div class="menu-section">
+      <div fxLayout="column" fxFlex="20" id="mainsections">
+            <div *ngFor="let menu of menudetails">
+                  <mat-list>
+                        <a mat-list-item routerLink="/{{menu.action}}">
+                              <span>{{menu.name}}</span>
+                        </a>
+                  </mat-list>
+
+            </div>
+      </div>
+
+      <!-- <div fxLayout="column" fxFlex="80">
+                <mat-table [dataSource]="dataSource">
+                      <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                        <mat-cell *matCellDef="let data">{{data.name}}</mat-cell>
+                      </ng-container>
+                      <ng-container matColumnDef="color">
+                              <mat-header-cell *matHeaderCellDef>color</mat-header-cell>
+                              <mat-cell *matCellDef="let data">{{data.color}}</mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="age">
+                                    <mat-header-cell *matHeaderCellDef>age</mat-header-cell>
+                                    <mat-cell *matCellDef="let data">{{data.age}}</mat-cell>
+                              </ng-container>
+
+                      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                      <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+                </mat-table>
+          </div> -->
+
+      <div style="width:100%">
+            <ngx-datatable class="material" [headerHeight]="50" [rowHeight]="'auto'" [columnMode]="'force'" [rows]="rows" [footerHeight]="50"
+                  [count]="true" [limit]="1">
+                  <ngx-datatable-column name="name">
+                              <ng-template let-column="column" ngx-datatable-header-template>
+                                         Name
+                                        </ng-template>
+
+                        <ng-template ngx-datatable-cell-template let-data="data.name">
+                              {{data.name}}
+                        </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="color">
+
+                              <ng-template let-column="column" ngx-datatable-header-template>
+                                          Color
+                                         </ng-template>
+                        <ng-template ngx-datatable-cell-template let-data="data.color">
+                              {{data.color}}
+                        </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="age">
+
+                              <ng-template let-column="column" ngx-datatable-header-template>
+                                          Age
+                                         </ng-template>
+                        <ng-template ngx-datatable-cell-template let-age="data.age">
+                              {{data.age}}
+                        </ng-template>
+                  </ngx-datatable-column>
+            </ngx-datatable>
+      </div>
+</div>

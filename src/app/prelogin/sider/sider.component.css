@@ -1,0 +1,22 @@
+.menu-section{
+    /* background-color: aqua; */
+    display:inline-grid;
+    color: blue;
+    line-height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;   
+}
+ .mat-list-item { 
+border-bottom: 3px solid salmon;
+} 
+ .mat-list-item:hover {
+    background-color:fuchsia; 
+} 
+#postlogin{
+    background-color: yellowgreen;
+    color: blanchedalmond;
+}
+#mainsections{
+    background-color: aqua
+}
+

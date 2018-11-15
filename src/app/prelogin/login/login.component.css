@@ -1,0 +1,19 @@
+.main_section{
+    background-image:url('../../../assets/images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(120vh - 128px) !important;
+    background-position: 100% top;
+    padding-bottom: 0px !important;
+    height:100%;
+    width:100%;
+}
+ .login_page{
+    margin-top: 15%;
+} 
+#header {
+    background-color:yellowgreen;
+}
+#footer{
+    background-color: aquamarine;
+}

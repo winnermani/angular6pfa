@@ -1,0 +1,29 @@
+<div class="main_section">
+    <form>
+        <div flexLayout="column" fxLayoutGap="4%">
+
+            <div flexLayout="column" fxLayoutGap="2%" fxFlexAlign="left">
+                <p> Testing </p>
+            </div>
+
+            <mat-form-field fxFlex="20">
+                <input matInput placeholder="Username" formControlName="uname" name="uname">
+            </mat-form-field>
+            <mat-form-field fxFlex="20">
+                <input matInput placeholder="Number" formControlName="number" name="number" type="number">
+            </mat-form-field>
+            <mat-form-field fxFlex="20">
+                <input matInput placeholder="transname" formControlName="trnsname" name="trnsname">
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div fxLayout="row">
+    <button mat-raised-button color="primary" (click)="number()">Primary</button>
+</div>
+
+
+<!-- Decrators -->
+<h5>Child Component</h5>
+<p>The Story: {{story}}</p>
+ <p> the current story: {{myCharacter}}</p>
